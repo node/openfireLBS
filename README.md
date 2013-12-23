@@ -1,0 +1,4 @@
+openfireLBS
+===========
+
+Openfire LBS plugin
