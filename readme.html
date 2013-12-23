@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Openfire LBS Plugin Readme</title>
+    <style type="text/css">
+        BODY {
+            font-size: 100%;
+        }
+
+        BODY, TD, TH {
+            font-family: tahoma, verdana, arial, helvetica, sans-serif;
+            font-size: 0.8em;
+        }
+
+        H2 {
+            font-size: 10pt;
+            font-weight: bold;
+        }
+
+        A:hover {
+            text-decoration: none;
+        }
+
+        H1 {
+            font-family: tahoma, arial, helvetica, sans-serif;
+            font-size: 1.4em;
+            font-weight: bold;
+            border-bottom: 1px #ccc solid;
+            padding-bottom: 2px;
+        }
+
+        TT {
+            font-family: courier new;
+            font-weight: bold;
+            color: #060;
+        }
+
+        PRE {
+            font-family: courier new;
+            font-size: 100%;
+        }
+
+        .events TH {
+            font-size: 8pt;
+            font-family: verdana;
+            font-weight: bold;
+            text-align: left;
+            background-color: #eee;
+            border-bottom: 1px #ccc solid;
+        }
+
+        .events .event {
+            font-weight: bold;
+        }
+
+        .events .description {
+            font-size: 8pt;
+            font-family: verdana;
+        }
+
+        .events TD {
+            border-bottom: 1px #ccc dotted;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>
+    Openfire LBS Plugin Readme
+</h1>
+
+<p>
+Created by Chris@SZ,CN 2013-12-22
+</p>
+
+<p>
+INSTRUCTION： 
+<br/>NAMESPACE  ：com.nodexy.im.openfire.location
+<br/>UPLOAD GPS ：IQ type is set
+<br/>FIND NEARME：IQ type is get 
+</p>
+
+<h2>XMPP LBS Extension</h2>
+<h3>1.Update user location information</h3> 
+
+REQUEST
+<pre>
+&lt;iq id="c919" type="set" from="chris@im.nodexy.com/TCL-S960">
+	&lt;query xmlns="com.nodexy.im.openfire.location">
+		&lt;item user="chris" lon="22.323009" lat="29.098763"/>
+	&lt;/query>
+&lt;/iq>
+</pre>
+<br/>
+<br/>
+
+RESPONSE:<br/>
+OK 
+<pre>
+&lt;iq id="c919" type="result" to="chris@im.nodexy.com/TCL-S960">
+	&lt;query xmlns="com.nodexy.im.openfire.location"/>
+&lt;/iq>
+</pre>
+<br/>
+<br/>
+
+ERROR
+<pre>
+&lt;iq id="c919" type="error" to="chris@im.nodexy.com/TCL-S960">
+	&lt;error type='cancel'>  
+		&lt;internal-server-error xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/>  
+	&lt;/error>
+&lt;/iq>
+</pre>
+<br/>
+<br/>
+
+<h3>2. Search users near me</h3> 
+
+REQUEST:
+<pre>
+&lt;iq id="c919" type="get" from="chris@im.nodexy.com/TCL-S960">
+	&lt;query xmlns="com.nodexy.im.openfire.location">
+		&lt;item user="chris" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
+	&lt;/query>
+&lt;/iq>
+</pre>
+<br/>
+<br/>
+
+RESPONSE:<br/>
+OK 
+<pre>
+&lt;iq id="c919" type="result" from="chris@im.nodexy.com/TCL-S960">
+	&lt;query xmlns="com.nodexy.im.openfire.location">
+		&lt;item user="chris1" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
+		&lt;item user="chris2" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
+		&lt;item user="chris3" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
+		... ...
+	&lt;/query>
+&lt;/iq>
+</pre>
+<br/>
+<br/>
+
+ERROR
+<pre>
+&lt;iq id="c919" type="error" to="chris@im.nodexy.com/TCL-S960">
+	&lt;error type='cancel'>  
+		&lt;internal-server-error xmlns='urn:ietf:params:xml:ns:xmpp-stanzas'/>  
+	&lt;/error>
+&lt;/iq>
+</pre>
+<br/>
+<br/>
+
+
+<br><br>
+
+<h2>Links</h2>
+<a href="http://xmpp.org">XMPP</a><br/>
+<a href="http://igniterealtime.org/projects/openfire">Openfire</a><br/>
+<a href="http://github.com/node/openfireLBS">OpenfireLBS plugin source code on Github</a><br/>
+<br><br><br><br>
+
+</body>
+</html>
