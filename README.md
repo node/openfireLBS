@@ -29,3 +29,7 @@ RESPONSE
 </iq>
 
 
+
+WARNING
+==
+The source code has no functional testing , pls DO NOT use it in your business production.
