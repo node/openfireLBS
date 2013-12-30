@@ -15,6 +15,17 @@ REQUEST
 	</query>
 </iq>
 
+    <iq id="c919" type="set" from="chris@im.nodexy.com/TCL-S960">
+	<query xmlns="com.nodexy.im.openfire.location">
+		<item user="chris" lon="22.323009" lat="29.098763"/>
+	</query>
+</iq>
+
+    <iq id="c919" type="set" from="chris@im.nodexy.com/TCL-S960" to="lena@im.nodexy.com/TCL-S960">
+	<query xmlns="com.nodexy.im.openfire.location">
+		<item user="chris" lon="22.323009" lat="29.098763"/>
+	</query>
+</iq>
 
 
 RESPONSE
