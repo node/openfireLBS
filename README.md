@@ -1,7 +1,7 @@
 openfireLBS
 ===========
 
-This is Openfire LBS plugin.
+This is Openfire LBS plugin based on private protocol as the following but not based on XEP-0080(http://xmpp.org/extensions/xep-0080.html).
 
 
 XMPP LBS Extension
