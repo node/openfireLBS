@@ -19,6 +19,8 @@
         <!-- More on this below -->
     </adminconsole>
     
+    <!--
     <databaseKey>openfireLBS</databaseKey>
     <databaseVersion>0</databaseVersion>
+    -->
 </plugin>

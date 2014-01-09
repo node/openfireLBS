@@ -17,7 +17,7 @@ import org.jivesoftware.openfire.container.PluginManager;
  */
 public class OpenfireLBSPlugin implements Plugin {
 
-	private static final String MODULE_NAME_LOCATION = "im.location";
+	private static final String MODULE_NAME_LOCATION = "location";
 
 	private XMPPServer server;
 	Connection openfireDBConn;
@@ -30,11 +30,10 @@ public class OpenfireLBSPlugin implements Plugin {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-
-		locationHandler = new LocationHandler(MODULE_NAME_LOCATION,
-				openfireDBConn);
+		
 		server = XMPPServer.getInstance();
-		server.getIQRouter().addHandler(locationHandler);
+		
+		server.getIQRouter().addHandler(new LocationHandler(MODULE_NAME_LOCATION));
 	}
 
 	@Override
@@ -45,10 +44,14 @@ public class OpenfireLBSPlugin implements Plugin {
 			server.getIQRouter().removeHandler(locationHandler);
 			locationHandler = null;
 		}
-		try {
-			openfireDBConn.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
+
+		if (openfireDBConn != null) {
+			try {
+				openfireDBConn.close();
+				openfireDBConn = null;
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
