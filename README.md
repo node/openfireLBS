@@ -1,7 +1,7 @@
 openfireLBS
 ===========
 
-This is Openfire LBS plugin.
+This is Openfire LBS plugin based on private protocol as the following but not based on XEP-0080(http://xmpp.org/extensions/xep-0080.html).
 
 
 XMPP LBS Extension
@@ -15,11 +15,22 @@ REQUEST
 	</query>
 </iq>
 
+    <iq id="c919" type="set" from="chris@im.nodexy.com/TCL-S960">
+	<query xmlns="com.nodexy.im.openfire.location">
+		<item user="chris" lon="22.323009" lat="29.098763"/>
+	</query>
+</iq>
+
+    <iq id="c919" type="set" from="chris@im.nodexy.com/TCL-S960" to="lena@im.nodexy.com/TCL-S960">
+	<query xmlns="com.nodexy.im.openfire.location">
+		<item user="chris" lon="22.323009" lat="29.098763"/>
+	</query>
+</iq>
 
 
 RESPONSE
 
-    <iq id="c919" type="result" from="chris@im.nodexy.com/TCL-S960">
+    <iq id="c919" type="result" to="chris@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location">
 		<item user="chris1" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
 		<item user="chris2" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
@@ -29,3 +40,7 @@ RESPONSE
 </iq>
 
 
+
+WARNING
+==
+The source code has no functional testing , pls DO NOT use it in your business production.
