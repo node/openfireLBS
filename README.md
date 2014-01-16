@@ -14,7 +14,7 @@ REQUEST
 	<query xmlns="com.nodexy.im.openfire.location">
 		<item user="chris" lon="22.323009" lat="29.098763"/>
 	</query>
-</iq>
+    </iq>
 
 2 Upload my GEO location 
 
@@ -22,7 +22,7 @@ REQUEST
 	<query xmlns="com.nodexy.im.openfire.location">
 		<item user="chris" lon="22.323009" lat="29.098763"/>
 	</query>
-</iq>
+    </iq>
 
 3 Share my GEO location to friend 
 
@@ -30,7 +30,7 @@ REQUEST
 	<query xmlns="com.nodexy.im.openfire.location">
 		<item user="chris" lon="22.323009" lat="29.098763"/>
 	</query>
-</iq>
+    </iq>
 
 
 RESPONSE
@@ -43,19 +43,19 @@ RESPONSE
 		<item user="chris3" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
 		... ...
 	</query>
-</iq>
+    </iq>
 
 2 Upload my GEO location 
 
     <iq id="c912" type="result" to="chris@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location"/>
-</iq>
+    </iq>
 
 3 Share my GEO location to friend 
 
     <iq id="c913" type="result" to="chris@im.nodexy.com/TCL-S960" from="lena@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location"/>
-</iq>
+    </iq>
 
 
 WARNING
