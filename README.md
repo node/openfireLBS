@@ -8,6 +8,7 @@ XMPP LBS Extension
 ==
 
 REQUEST
+
 1 Get users near me with my GEO location
 
     <iq id="c911" type="get" from="chris@im.nodexy.com/TCL-S960">
@@ -34,6 +35,7 @@ REQUEST
 
 
 RESPONSE
+
 1 Get users near me 
 
     <iq id="c919" type="result" to="chris@im.nodexy.com/TCL-S960">
