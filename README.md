@@ -19,7 +19,7 @@ REQUEST
 
 RESPONSE
 
-    <iq id="c919" type="result" to="chris@im.nodexy.com/TCL-S960">
+    <iq id="c911" type="result" to="chris@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location">
 		<item user="chris1" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
 		<item user="chris2" lon="22.323009" lat="29.098763" sex="0" online="30min"/>
