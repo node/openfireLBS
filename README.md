@@ -31,6 +31,7 @@ RESPONSE
 2 Upload my GEO location 
 
 REQUEST
+
     <iq id="c912" type="set" from="chris@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location">
 		<item user="chris" lon="22.323009" lat="29.098763"/>
@@ -38,6 +39,7 @@ REQUEST
     </iq>
 
 RESPONSE
+
     <iq id="c912" type="result" to="chris@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location"/>
     </iq>
@@ -46,6 +48,7 @@ RESPONSE
 3 Share my GEO location to friend 
 
 REQUEST
+
     <iq id="c913" type="set" from="chris@im.nodexy.com/TCL-S960" to="lena@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location">
 		<item user="chris" lon="22.323009" lat="29.098763"/>
@@ -53,6 +56,7 @@ REQUEST
     </iq>
 
 RESPONSE
+
     <iq id="c913" type="result" to="chris@im.nodexy.com/TCL-S960" from="lena@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location"/>
     </iq>
