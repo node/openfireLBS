@@ -7,9 +7,9 @@ This is Openfire LBS(Location Based Service) plugin based on private protocol as
 XMPP LBS Extension
 ==
 
-REQUEST
-
 1 Get users near me with my GEO location
+
+REQUEST
 
     <iq id="c911" type="get" from="chris@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location">
@@ -17,26 +17,7 @@ REQUEST
 	</query>
     </iq>
 
-2 Upload my GEO location 
-
-    <iq id="c912" type="set" from="chris@im.nodexy.com/TCL-S960">
-	<query xmlns="com.nodexy.im.openfire.location">
-		<item user="chris" lon="22.323009" lat="29.098763"/>
-	</query>
-    </iq>
-
-3 Share my GEO location to friend 
-
-    <iq id="c913" type="set" from="chris@im.nodexy.com/TCL-S960" to="lena@im.nodexy.com/TCL-S960">
-	<query xmlns="com.nodexy.im.openfire.location">
-		<item user="chris" lon="22.323009" lat="29.098763"/>
-	</query>
-    </iq>
-
-
 RESPONSE
-
-1 Get users near me 
 
     <iq id="c919" type="result" to="chris@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location">
@@ -46,15 +27,32 @@ RESPONSE
 		... ...
 	</query>
     </iq>
-
+    
 2 Upload my GEO location 
 
+REQUEST
+    <iq id="c912" type="set" from="chris@im.nodexy.com/TCL-S960">
+	<query xmlns="com.nodexy.im.openfire.location">
+		<item user="chris" lon="22.323009" lat="29.098763"/>
+	</query>
+    </iq>
+
+RESPONSE
     <iq id="c912" type="result" to="chris@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location"/>
     </iq>
 
+
 3 Share my GEO location to friend 
 
+REQUEST
+    <iq id="c913" type="set" from="chris@im.nodexy.com/TCL-S960" to="lena@im.nodexy.com/TCL-S960">
+	<query xmlns="com.nodexy.im.openfire.location">
+		<item user="chris" lon="22.323009" lat="29.098763"/>
+	</query>
+    </iq>
+
+RESPONSE
     <iq id="c913" type="result" to="chris@im.nodexy.com/TCL-S960" from="lena@im.nodexy.com/TCL-S960">
 	<query xmlns="com.nodexy.im.openfire.location"/>
     </iq>
