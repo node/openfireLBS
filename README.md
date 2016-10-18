@@ -1,13 +1,13 @@
 openfireLBS
 ===========
 
-This is Openfire LBS(Location Based Service) plugin based on private protocol as the following but not based on XEP-0080(http://xmpp.org/extensions/xep-0080.html).
+This is Openfire LBS(Location Based Service) plugin based on private extension protocol as the following but NOT based on XEP-0080(http://xmpp.org/extensions/xep-0080.html).
 
 
 XMPP LBS Extension
 ==
 
-1 Get users near me with my GEO location
+1 Get users near me with my location
 
 REQUEST
 
@@ -28,7 +28,7 @@ RESPONSE
 	</query>
     </iq>
     
-2 Upload my GEO location 
+2 Upload my location 
 
 REQUEST
 
@@ -45,7 +45,7 @@ RESPONSE
     </iq>
 
 
-3 Share my GEO location to friend 
+3 Share my location to friends 
 
 REQUEST
 
@@ -64,4 +64,4 @@ RESPONSE
 
 WARNING
 ==
-The source code has no functional testing , pls DO NOT use it in your business production.
+The source code has no functional testing , pls DO NOT use it in your business production directly.
