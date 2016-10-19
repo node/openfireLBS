@@ -1,3 +1,6 @@
+[![Build Status](https://drone.io/github.com/node/openfireLBS/status.png)](https://drone.io/github.com/node/openfireLBS/latest)
+
+
 openfireLBS
 ===========
 
