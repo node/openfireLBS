@@ -10,7 +10,7 @@ This is Openfire LBS(Location Based Service) plugin based on private extension p
 XMPP LBS Extension
 ==
 
-1 Get users near me with my location
+### 1 Get users near me with my location
 
 REQUEST
 
@@ -31,7 +31,7 @@ RESPONSE
 	</query>
     </iq>
     
-2 Upload my location 
+### 2 Upload my location 
 
 REQUEST
 
@@ -48,7 +48,7 @@ RESPONSE
     </iq>
 
 
-3 Share my location to friends 
+### 3 Share my location to friends 
 
 REQUEST
 
